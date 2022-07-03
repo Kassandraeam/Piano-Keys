@@ -1,5 +1,5 @@
 # Piano-Keys
-Project from the Building Interactive JavaScript Websites Pro Course in the DOM Events with JavaScript section.
+Guided Project from the Building Interactive JavaScript Websites Pro Course in the DOM Events with JavaScript section.
 
 Key Concepts:
 
