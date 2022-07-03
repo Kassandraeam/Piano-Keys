@@ -21,10 +21,19 @@ const keyReturn = function(event){
 }
 
 // Write a loop that runs the array elements through the function
-
-const step3 = (note) => {
-
+  //create an event handler that runs the keyPlay as an event handler when a mousedown event fires on any note.
+let eventAssignment = function(note){
+  note.onmousedown = function(){ // this is an anonymous function
+    keyPlay(event);
+  }
+  not.onmouseup = function(){
+    keyReturn(event);
+  }
 }
+/* event handler property syntax:
+  eventTarget.onevent = eventHandlerFunction;
+
+*/
 
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById('first-next-line');
