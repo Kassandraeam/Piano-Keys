@@ -8,28 +8,29 @@ keys.forEach(function(key){
 })
 
 // Write named functions that change the color of the keys below
-
-
-// Write a named function with event handler properties
-
 const keyPlay = function(event){
-  event.target.style.backgroundColor = 'green';
+  event.target.style.backgroundColor = 'orange';
 }
 
 const keyReturn = function(event){
   event.target.style.backgroundColor = '';
 }
 
-// Write a loop that runs the array elements through the function
-  //create an event handler that runs the keyPlay as an event handler when a mousedown event fires on any note.
+// Write a named function with event handler properties
+
 let eventAssignment = function(note){
   note.onmousedown = function(){ // this is an anonymous function
     keyPlay(event);
   }
-  not.onmouseup = function(){
+  note.onmouseup = function(){
     keyReturn(event);
   }
 }
+
+
+// Write a loop that runs the array elements through the function
+  //create an event handler that runs the keyPlay as an event handler when a mousedown event fires on any note.
+notes.forEach(eventAssignment); // each element is now able to accces the event assignment.
 /* event handler property syntax:
   eventTarget.onevent = eventHandlerFunction;
 
@@ -50,7 +51,12 @@ nextThree.hidden = true;
 startOver.hidden= true;
 
 // Write anonymous event handler property and function for the first progress button
-
+nextOne.onclick = function() {
+  nextTwo.hidden = false;
+  nextOne.hidden = true;
+  document.getElementById('letter-note-five').innerHTML = 'D';
+  document.getElementById('letter-note-six').innerHTML = 'C';
+}
 
 // Write anonymous event handler property and function for the second progress button
 
